@@ -152,10 +152,54 @@
             z-index: 1;
         }
 
+        /* Top Banner */
+        .top-banner {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, var(--deep-space), var(--dark-navy));
+            border-bottom: 2px solid var(--neon-green);
+            padding: 12px 20px;
+            text-align: center;
+            z-index: 1001;
+            box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+            animation: bannerPulse 2s ease-in-out infinite;
+            display: block;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .top-banner:hover {
+            background: linear-gradient(135deg, var(--dark-navy), var(--space-blue));
+            box-shadow: 0 4px 30px rgba(0, 255, 136, 0.5);
+        }
+
+        .top-banner p {
+            margin: 0;
+            color: var(--neon-green);
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        @keyframes bannerPulse {
+            0%, 100% {
+                box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
+                border-bottom-color: var(--neon-green);
+            }
+            50% {
+                box-shadow: 0 4px 30px rgba(0, 255, 136, 0.6);
+                border-bottom-color: var(--bright-green);
+            }
+        }
+
         /* Header */
         .header {
             position: fixed;
-            top: 0;
+            top: 50px;
             left: 0;
             right: 0;
             background: rgba(10, 15, 26, 0.95);
@@ -1458,7 +1502,7 @@
             }
 
             .hero {
-                padding-top: 80px;
+                padding-top: 130px;
             }
 
             .hero-content {
@@ -1540,6 +1584,13 @@
             }
         }
 
+        @media (max-width: 768px) {
+            .top-banner p {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+        }
+
         @media (max-width: 480px) {
             .container {
                 padding: 0 20px;
@@ -1547,6 +1598,14 @@
 
             .nav {
                 padding: 10px 20px;
+            }
+
+            .top-banner {
+                padding: 10px 15px;
+            }
+
+            .top-banner p {
+                font-size: 12px;
             }
 
             .hero-text h1 {
@@ -1754,6 +1813,11 @@
 <body>
     <!-- Particle Background -->
     <div id="particles"></div>
+
+    <!-- Top Banner -->
+    <a href="#contact" class="top-banner" onclick="event.preventDefault(); const target = document.querySelector('#contact'); if (target) { target.scrollIntoView({ behavior: 'smooth' }); }">
+        <p>Coming Soon: Monster Smarters v5 & Monster IBO Pro Player</p>
+    </a>
 
     <!-- Header -->
     <header class="header">
@@ -2702,11 +2766,9 @@
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: encodeFormData(formData)
             }).then(() => {
-                console.log('Trial Form Data:', data);
                 alert('Thank you! Your free trial request has been received. We\'ll contact you shortly at ' + data.email);
                 form.reset();
             }).catch(error => {
-                console.error('Trial form submission failed:', error);
                 alert('Oops! Something went wrong. Please try submitting the form again or email us directly.');
             });
         }
@@ -2722,11 +2784,9 @@
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: encodeFormData(formData)
             }).then(() => {
-                console.log('Contact Form Data:', data);
                 alert('Thank you for your message! We\'ll get back to you soon at ' + data.email);
                 form.reset();
             }).catch(error => {
-                console.error('Contact form submission failed:', error);
                 alert('Oops! Something went wrong. Please try again or email us directly.');
             });
         }
