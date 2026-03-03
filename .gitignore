@@ -1,3 +1,9 @@
 
 # macOS
 .DS_Store
+
+# Ignore local backup/report files
+FINAL_PRE_LAUNCH_REPORT.md
+Logo/Logo_backup.png
+Logo/Logo_compressed.png
+Logo/Logo_original_5.9MB.png
