@@ -5,15 +5,15 @@
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="keywords" content="Monster Streams IPTV, IPTV UK, IPTV US, UK live TV, US live TV, IPTV worldwide, global IPTV, Firestick IPTV, Android IPTV, IPTV sports, IPTV football, IPTV free trial">
+    <meta name="keywords" content="Monster Streams, IPTV Thailand, IPTV Phuket, IPTV Southeast Asia, streaming Thailand, hospitality TV, hotel TV solution, sports bar streaming, villa TV, Monster Streams IPTV, IPTV UK, IPTV US, Firestick IPTV, Android IPTV, IPTV free trial">
     <meta name="author" content="Monster Streams">
     <meta name="robots" content="index, follow">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>Monster Streams IPTV - 4K Live TV & Sports in The UK/US & Around The World</title>
-    <meta name="description" content="IPTV for UK/US & Customers Around The World: live channels, sports, movies, series, and 4K quality on Amazon, Android and iOS with a Free 24h Trial.">
+    <title>Monster Streams | TV &amp; Streaming Setup — Thailand, Phuket, Southeast Asia &amp; Worldwide</title>
+    <meta name="description" content="TV and streaming setup for homes, hotels, villas, sports bars, and restaurants in Thailand, Phuket, Southeast Asia, the UK, US, and worldwide. Multi-device support, clear onboarding, free trial. Use services lawfully for your region.">
     <link rel="canonical" href="https://monsterstreams.com/">
     <link rel="alternate" hreflang="en" href="https://monsterstreams.com/">
     <link rel="alternate" hreflang="en-GB" href="https://monsterstreams.com/">
@@ -28,13 +28,13 @@
         "alternateName": "Monster Streams IPTV",
         "url": "https://monsterstreams.com/",
         "logo": "https://monsterstreams.com/Logo/Logo.png",
-        "description": "Monster Streams IPTV delivers 15,000+ live channels, 80,000+ movies, sports, and PPV events with a free 24-hour trial and worldwide device support.",
+        "description": "Monster Streams provides streaming and TV-style access solutions with multi-device support, setup guidance, and trial options for customers worldwide, including Thailand, Phuket, and Southeast Asia.",
         "contactPoint": [
             {
                 "@type": "ContactPoint",
                 "contactType": "customer support",
                 "email": "monstertv6969@gmail.com",
-                "areaServed": "Worldwide",
+                "areaServed": "Worldwide, Thailand, Phuket, Southeast Asia",
                 "availableLanguage": [
                     "English"
                 ]
@@ -43,7 +43,7 @@
                 "@type": "ContactPoint",
                 "contactType": "subscriptions",
                 "email": "monstertvpayments6969@gmail.com",
-                "areaServed": "Worldwide",
+                "areaServed": "Worldwide, Thailand, Phuket, Southeast Asia",
                 "availableLanguage": [
                     "English"
                 ]
@@ -471,13 +471,14 @@
 
         .hero-text h1 {
             font-family: 'Orbitron', monospace;
-            font-size: 72px;
+            font-size: clamp(28px, 4.5vw, 56px);
             font-weight: 900;
             color: var(--neon-green);
             text-transform: uppercase;
             margin-bottom: 20px;
             text-shadow: 0 0 40px rgba(0, 255, 136, 0.8);
             animation: glow 2s ease-in-out infinite;
+            line-height: 1.15;
         }
 
         @keyframes glow {
@@ -785,6 +786,65 @@
             line-height: 1.7;
             position: relative;
             z-index: 1;
+        }
+
+        /* News / Blog teaser */
+        .news-section {
+            padding: 100px 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .news-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(0, 255, 136, 0.25);
+            border-radius: 20px;
+            padding: 36px;
+            transition: all 0.35s ease;
+        }
+
+        .news-card:hover {
+            border-color: var(--neon-green);
+            box-shadow: 0 16px 50px rgba(0, 255, 136, 0.25);
+            transform: translateY(-6px);
+        }
+
+        .news-card h3 {
+            font-size: 24px;
+            color: var(--neon-green);
+            margin-bottom: 14px;
+            font-weight: 700;
+        }
+
+        .news-card p {
+            color: var(--light-gray);
+            font-size: 17px;
+            line-height: 1.7;
+            margin-bottom: 22px;
+        }
+
+        .news-card a.read-more {
+            display: inline-flex;
+            align-items: center;
+            color: var(--cyan-accent);
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 17px;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.25s ease, color 0.25s ease;
+        }
+
+        .news-card a.read-more:hover {
+            border-bottom-color: var(--neon-green);
+            color: var(--neon-green);
         }
 
         /* Setup Guides Section */
@@ -1467,7 +1527,7 @@
             }
 
             .hero-text h1 {
-                font-size: 56px;
+                font-size: clamp(24px, 5vw, 42px);
             }
 
             .contact-grid {
@@ -1510,7 +1570,7 @@
             }
 
             .hero-text h1 {
-                font-size: 42px;
+                font-size: clamp(22px, 6vw, 32px);
             }
 
             .hero-subtitle {
@@ -1602,6 +1662,7 @@
             }
 
             .features-section,
+            .news-section,
             .setup-section,
             .pricing-section,
             .trial-section,
@@ -1636,6 +1697,7 @@
             }
 
             .features-section,
+            .news-section,
             .setup-section,
             .pricing-section,
             .trial-section,
@@ -1644,7 +1706,7 @@
             }
 
             .hero-text h1 {
-                font-size: 36px;
+                font-size: clamp(20px, 7vw, 28px);
             }
 
             .hero-subtitle {
@@ -1795,20 +1857,6 @@
     </style>
 
 
-    <meta property="og:title" content="Monster Streams IPTV - 4K Live TV & Sports in The UK/US & Around The World">
-    <meta property="og:description" content="IPTV for UK/US & Customers Around The World: live channels, sports, movies, series, and 4K quality on Amazon, Android and iOS with a Free 24h Trial.">
-    <meta property="og:image" content="/Logo/Logo.png">
-    <meta property="og:url" content="https://monsterstreams.com/">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Monster Streams IPTV">
-    <meta property="og:locale" content="en_US">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Monster Streams IPTV - 4K Live TV & Sports in The UK/US & Around The World">
-    <meta name="twitter:description" content="IPTV for UK/US & Customers Around The World: live channels, sports, movies, series, and 4K quality on Amazon, Android and iOS with a Free 24h Trial.">
-    <meta name="twitter:image" content="/Logo/Logo.png">
-    <meta name="twitter:site" content="@monsterstreams">
-
     <meta name="theme-color" content="#00ff88">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -1820,13 +1868,16 @@
         "@type": "Service",
         "name": "Monster Streams IPTV",
         "serviceType": "IPTV streaming",
-        "description": "IPTV service with 15,000+ live channels, 80,000+ movies and sports, 4K quality, available for UK, US and customers worldwide.",
+        "description": "Streaming and TV-style access with multi-device setup support, hospitality-friendly options where applicable, and trial availability. Serves home and commercial customers in Thailand, Phuket, Southeast Asia, the UK, US, and worldwide—use only where lawful for your situation.",
         "provider": {
             "@type": "Organization",
             "name": "Monster Streams",
             "url": "https://monsterstreams.com/"
         },
         "areaServed": [
+            {"@type": "Country", "name": "Thailand"},
+            {"@type": "AdministrativeArea", "name": "Phuket"},
+            {"@type": "Place", "name": "Southeast Asia"},
             {"@type": "Country", "name": "United Kingdom"},
             {"@type": "Country", "name": "United States"},
             {"@type": "Place", "name": "Worldwide"}
@@ -1844,6 +1895,20 @@
         }
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Monster Streams",
+        "url": "https://monsterstreams.com/",
+        "description": "TV and streaming setup for homes and hospitality in Thailand, Phuket, Southeast Asia, the UK, US, and worldwide.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Monster Streams",
+            "url": "https://monsterstreams.com/"
+        }
+    }
+    </script>
 </head>
 <body>
     <!-- Particle Background -->
@@ -1858,12 +1923,13 @@
     <header class="header">
         <nav class="nav">
             <div class="logo-container" onclick="scrollToSection('hero')">
-                <img src="/Logo/Logo.png" alt="Monster Streams Logo" class="logo-img" loading="eager">
+                <img src="/Logo/Logo.png" alt="Monster Streams — TV and streaming solutions for home and business" class="logo-img" loading="eager">
                 <span class="logo-text">Monster Streams</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#hero">Home</a></li>
                 <li><a href="#features">Features</a></li>
+                <li><a href="#news">News</a></li>
                 <li><a href="#setup">Setup</a></li>
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#trial" class="cta-nav">Free Trial</a></li>
@@ -1879,6 +1945,7 @@
         <ul class="mobile-links">
             <li><a href="#hero" onclick="toggleMobileMenu()">Home</a></li>
             <li><a href="#features" onclick="toggleMobileMenu()">Features</a></li>
+            <li><a href="#news" onclick="toggleMobileMenu()">News</a></li>
             <li><a href="#setup" onclick="toggleMobileMenu()">Setup</a></li>
             <li><a href="#pricing" onclick="toggleMobileMenu()">Pricing</a></li>
             <li><a href="#trial" onclick="toggleMobileMenu()">Free Trial</a></li>
@@ -1893,23 +1960,23 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text fade-in">
-                    <h1>Monster Streams IPTV</h1>
-                    <p class="hero-subtitle">Premium IPTV Streaming Service</p>
+                    <h1>Monster Streams — TV &amp; streaming for Thailand, Phuket, SE Asia &amp; worldwide</h1>
+                    <p class="hero-subtitle">Streaming service setup for homes, villas, hotels, sports bars &amp; restaurants</p>
                     <p class="hero-description">
-                        Monster Streams unlocks 15,000+ live channels, 80,000+ movies & series, PPV sports, and 4K-quality viewing with lightning-fast delivery across every device. Available for UK, US and customers worldwide with VPN guidance for smooth sports streams.
+                        Entertainment access solutions with multi-device setup, clear onboarding, and support for customers in <strong>Thailand</strong>, <strong>Phuket</strong>, <strong>Southeast Asia</strong>, the <strong>UK</strong>, <strong>US</strong>, and worldwide. Ideal when you need dependable TV-style streaming for guests or family. Use only where lawful for your location; a VPN may be required in some regions. <a href="/blog/iptv-thailand-phuket-southeast-asia-guide.html" style="color: var(--cyan-accent); font-weight: 600;">Read our IPTV Thailand &amp; Phuket guide →</a>
                     </p>
                     <div class="hero-stats">
                         <div class="stat-card">
-                            <span class="stat-number">15K+</span>
-                            <span class="stat-label">Live Channels</span>
+                            <span class="stat-number">Live</span>
+                            <span class="stat-label">TV &amp; sports lineup</span>
                         </div>
                         <div class="stat-card">
-                            <span class="stat-number">80K+</span>
-                            <span class="stat-label">Movies & Series</span>
+                            <span class="stat-number">VOD</span>
+                            <span class="stat-label">Movies &amp; series</span>
                         </div>
                         <div class="stat-card">
                             <span class="stat-number">4K</span>
-                            <span class="stat-label">Ultra HD</span>
+                            <span class="stat-label">Where supported</span>
                         </div>
                     </div>
                     <div class="hero-buttons">
@@ -1919,7 +1986,7 @@
                 </div>
                 <div class="hero-visual fade-in">
                     <div class="streaming-rings"></div>
-                    <img src="/Logo/Logo.png" alt="Monster Streams IPTV hero graphic" class="monster-graphic" loading="lazy">
+                    <img src="/Logo/Logo.png" alt="Monster Streams brand mascot — hospitality and home streaming" class="monster-graphic" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1928,23 +1995,23 @@
     <!-- Features Section -->
     <section id="features" class="features-section">
         <div class="container">
-            <h2 class="section-title">Monster Streams Features</h2>
-            <p class="section-subtitle">Experience Monster Streams IPTV with cutting-edge delivery, multi-device flexibility, and unmatched global content variety.</p>
+            <h2 class="section-title">TV &amp; streaming features for homes, hotels, villas &amp; bars</h2>
+            <p class="section-subtitle">Built for residential and commercial setups in Thailand, Phuket, Southeast Asia, the UK, US, and worldwide—clear delivery, multi-device flexibility, and international-leaning entertainment options where your plan and region allow.</p>
             <div class="features-grid">
                 <div class="feature-card fade-in">
                     <div class="feature-icon">📡</div>
-                    <h3>4K Ultra HD Quality</h3>
-                    <p>Crystal-clear streaming in stunning 4K resolution with HDR support and premium audio quality for a truly immersive experience.</p>
+                    <h3>HD, 4K &amp; HDR where available</h3>
+                    <p>High-definition and up to 4K-style playback on compatible devices and titles; quality depends on content, hardware, and network conditions.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">🌐</div>
-                    <h3>Global Content</h3>
-                    <p>Access 15,000+ live channels from around the world in multiple languages, covering news, entertainment, and cultural programming.</p>
+                    <h3>Global-leaning content</h3>
+                    <p>Broad live and on-demand options across multiple languages—news, entertainment, and cultural programming—depending on your subscription and regional availability.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">⚡</div>
-                    <h3>Zero Buffering</h3>
-                    <p>Advanced streaming technology with worldwide server locations ensures smooth, uninterrupted viewing without buffering.</p>
+                    <h3>Smooth playback</h3>
+                    <p>Streaming tuned for real-world networks; aim for stable viewing on a good connection. Results vary by device, ISP, and location.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">🎮</div>
@@ -1953,13 +2020,13 @@
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">⚽</div>
-                    <h3>Sports Coverage</h3>
-                    <p>Never miss a game with dedicated sports channels, live events, PPV fights, and comprehensive tournament coverage.</p>
+                    <h3>Sports &amp; live events</h3>
+                    <p>Sports and entertainment channels plus live-style event coverage where included in your package—always confirm what your plan supports in your region.</p>
                 </div>
                 <div class="feature-card fade-in">
                     <div class="feature-icon">🎬</div>
-                    <h3>Massive Library</h3>
-                    <p>80,000+ movies and TV series including latest releases, classics, documentaries, and exclusive content updated regularly.</p>
+                    <h3>On-demand library</h3>
+                    <p>Large movies-and-series catalog with regular updates; availability of specific titles depends on the service catalogue and your region.</p>
                 </div>
             </div>
         </div>
@@ -1968,8 +2035,8 @@
     <!-- Setup Guides Section -->
     <section id="setup" class="setup-section">
         <div class="container">
-            <h2 class="section-title">Monster Streams Setup Guides</h2>
-            <p class="section-subtitle">Follow these step-by-step Monster Streams IPTV guides to get streaming on any device in minutes.</p>
+            <h2 class="section-title">Device setup guides — Fire TV, Android, smart TV &amp; more</h2>
+            <p class="section-subtitle">Step-by-step Monster Streams onboarding for popular devices. Same-day setup is typical when instructions are followed on a compatible device.</p>
             <div class="accordion">
                 <!-- Firestick Setup -->
                 <div class="accordion-item fade-in">
@@ -2194,11 +2261,26 @@
         </div>
     </section>
 
+    <!-- News / Blog -->
+    <section id="news" class="news-section">
+        <div class="container">
+            <h2 class="section-title">News &amp; guides</h2>
+            <p class="section-subtitle">Practical articles on streaming setup, IPTV considerations in Thailand and Southeast Asia, and choosing providers for hospitality or home use—without the hype.</p>
+            <div class="news-grid">
+                <article class="news-card fade-in">
+                    <h3>IPTV Thailand guide: Phuket, SE Asia &amp; beyond</h3>
+                    <p>What hotels, villas, sports bars, restaurants, and home users should look for in a streaming or IPTV-style setup—stability, support, devices, and lawful use.</p>
+                    <a class="read-more" href="/blog/iptv-thailand-phuket-southeast-asia-guide.html">Read the full guide →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
     <!-- Pricing Section -->
     <section id="pricing" class="pricing-section">
         <div class="container">
-            <h2 class="section-title">Monster Streams Plans</h2>
-            <p class="section-subtitle">Choose the perfect Monster Streams IPTV subscription for your viewing needs with flexible 1 to 12 month options.</p>
+            <h2 class="section-title">Plans &amp; pricing — 1 to 12 months</h2>
+            <p class="section-subtitle">Flexible subscriptions for home or venue use in Thailand, Phuket, Southeast Asia, and worldwide. Enquire for Asia-specific rates if needed.</p>
             
             <div class="pricing-tabs">
                 <div class="pricing-tab active" onclick="showPricingTab('12month', this)">12 Months</div>
@@ -2214,8 +2296,8 @@
                     <div class="pricing-price">£55</div>
                     <ul class="pricing-features">
                         <li>12 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>1 Device Connection</li>
                         <li>24/7 Support</li>
@@ -2227,8 +2309,8 @@
                     <div class="pricing-price">£85</div>
                     <ul class="pricing-features">
                         <li>12 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>2 Device Connections</li>
                         <li>24/7 Support</li>
@@ -2241,8 +2323,8 @@
                     <div class="pricing-price">£115</div>
                     <ul class="pricing-features">
                         <li>12 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>3 Device Connections</li>
                         <li>24/7 Priority Support</li>
@@ -2254,8 +2336,8 @@
                     <div class="pricing-price">£145</div>
                     <ul class="pricing-features">
                         <li>12 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>4 Device Connections</li>
                         <li>24/7 Support</li>
@@ -2267,8 +2349,8 @@
                     <div class="pricing-price">£175</div>
                     <ul class="pricing-features">
                         <li>12 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>5 Device Connections</li>
                         <li>24/7 Premium Support</li>
@@ -2284,8 +2366,8 @@
                     <div class="pricing-price">£40</div>
                     <ul class="pricing-features">
                         <li>6 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>1 Device Connection</li>
                         <li>24/7 Support</li>
@@ -2297,8 +2379,8 @@
                     <div class="pricing-price">£60</div>
                     <ul class="pricing-features">
                         <li>6 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>2 Device Connections</li>
                         <li>24/7 Support</li>
@@ -2311,8 +2393,8 @@
                     <div class="pricing-price">£80</div>
                     <ul class="pricing-features">
                         <li>6 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>3 Device Connections</li>
                         <li>24/7 Priority Support</li>
@@ -2324,8 +2406,8 @@
                     <div class="pricing-price">£100</div>
                     <ul class="pricing-features">
                         <li>6 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>4 Device Connections</li>
                         <li>24/7 Support</li>
@@ -2337,8 +2419,8 @@
                     <div class="pricing-price">£120</div>
                     <ul class="pricing-features">
                         <li>6 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>5 Device Connections</li>
                         <li>24/7 Premium Support</li>
@@ -2354,8 +2436,8 @@
                     <div class="pricing-price">£30</div>
                     <ul class="pricing-features">
                         <li>3 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>1 Device Connection</li>
                         <li>24/7 Support</li>
@@ -2367,8 +2449,8 @@
                     <div class="pricing-price">£45</div>
                     <ul class="pricing-features">
                         <li>3 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>2 Device Connections</li>
                         <li>24/7 Support</li>
@@ -2381,8 +2463,8 @@
                     <div class="pricing-price">£60</div>
                     <ul class="pricing-features">
                         <li>3 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>3 Device Connections</li>
                         <li>24/7 Priority Support</li>
@@ -2394,8 +2476,8 @@
                     <div class="pricing-price">£75</div>
                     <ul class="pricing-features">
                         <li>3 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>4 Device Connections</li>
                         <li>24/7 Support</li>
@@ -2407,8 +2489,8 @@
                     <div class="pricing-price">£90</div>
                     <ul class="pricing-features">
                         <li>3 Months Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>5 Device Connections</li>
                         <li>24/7 Premium Support</li>
@@ -2424,8 +2506,8 @@
                     <div class="pricing-price">£15</div>
                     <ul class="pricing-features">
                         <li>1 Month Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>1 Device Connection</li>
                         <li>24/7 Support</li>
@@ -2437,8 +2519,8 @@
                     <div class="pricing-price">£25</div>
                     <ul class="pricing-features">
                         <li>1 Month Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>2 Device Connections</li>
                         <li>24/7 Support</li>
@@ -2451,8 +2533,8 @@
                     <div class="pricing-price">£35</div>
                     <ul class="pricing-features">
                         <li>1 Month Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>3 Device Connections</li>
                         <li>24/7 Priority Support</li>
@@ -2464,8 +2546,8 @@
                     <div class="pricing-price">£45</div>
                     <ul class="pricing-features">
                         <li>1 Month Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>4 Device Connections</li>
                         <li>24/7 Support</li>
@@ -2477,8 +2559,8 @@
                     <div class="pricing-price">£55</div>
                     <ul class="pricing-features">
                         <li>1 Month Access</li>
-                        <li>15,000+ Live Channels</li>
-                        <li>80,000+ Movies & Series</li>
+                        <li>Live channels &amp; sports lineup</li>
+                        <li>Movies &amp; series on demand</li>
                         <li>4K Ultra HD Quality</li>
                         <li>5 Device Connections</li>
                         <li>24/7 Premium Support</li>
@@ -2495,12 +2577,12 @@
             <div class="trial-container">
                 <div class="trial-card fade-in">
                     <div class="trial-icon">🎯</div>
-                    <h2>Get Your Free Monster Streams 24 Hour Trial</h2>
+                    <h2>Free 24-hour trial — Monster Streams streaming setup</h2>
                     <p>Experience Monster Streams IPTV risk-free! Test all features, channels, and quality before you commit. Available Monday - Friday.</p>
                     <div class="trial-note">
                         <p>⚠️ IMPORTANT: Please take a free 24 hour Monster Streams trial (Monday-Friday) to test first before purchasing. This ensures compatibility with your device and satisfaction with our IPTV service.</p>
                     </div>
-                    <form id="trialForm" name="trial" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleTrialSubmit(event)">
+                    <form id="trialForm" name="trial" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleTrialSubmit(event)">
                         <input type="hidden" name="form-name" value="trial">
                         <p style="display:none;">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
@@ -2541,7 +2623,7 @@
     <!-- Terms & Conditions Section -->
     <section id="terms" class="terms-section">
         <div class="container">
-            <h2 class="section-title">Monster Streams Terms & Conditions</h2>
+            <h2 class="section-title">Terms, lawful use &amp; service conditions</h2>
             <div class="terms-content fade-in">
                 <div class="important-notice">
                     <p>⚠️ Please read these terms carefully before using our service</p>
@@ -2586,7 +2668,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title">Contact Monster Streams</h2>
+            <h2 class="section-title">Contact — trials, billing &amp; hospitality enquiries</h2>
             <p class="section-subtitle">Have questions about Monster Streams IPTV? Need support? We're here to help!</p>
             <div class="contact-grid">
                 <div class="contact-info">
@@ -2626,7 +2708,7 @@
                     </div>
                 </div>
                 <div class="contact-form-container fade-in">
-                    <form id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="contact-bot-field" onsubmit="handleContactSubmit(event)" class="trial-card" style="text-align: left;">
+                    <form id="contactForm" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="contact-bot-field" onsubmit="handleContactSubmit(event)" class="trial-card" style="text-align: left;">
                         <input type="hidden" name="form-name" value="contact">
                         <p style="display:none;">
                             <label>Don't fill this out if you're human: <input name="contact-bot-field" /></label>
@@ -2668,20 +2750,22 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="/Logo/Logo.png" alt="Monster Streams IPTV logo" class="footer-logo" loading="lazy">
+                    <img src="/Logo/Logo.png" alt="Monster Streams — streaming and TV solutions logo" class="footer-logo" loading="lazy">
                     <h4>Monster Streams</h4>
-                    <p>Premium IPTV streaming service with 15,000+ channels and 80,000+ movies in stunning 4K quality.</p>
+                    <p>TV and streaming setup for homes and businesses in Thailand, Phuket, Southeast Asia, and worldwide—with multi-device support and trial options.</p>
                 </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <a href="#hero">Home</a>
                     <a href="#features">Features</a>
+                    <a href="#news">News &amp; guides</a>
                     <a href="#setup">Setup Guides</a>
                     <a href="#pricing">Pricing</a>
                 </div>
                 <div class="footer-section">
                     <h4>Support</h4>
                     <a href="#trial">Free Trial</a>
+                    <a href="/blog/iptv-thailand-phuket-southeast-asia-guide.html">IPTV Thailand guide</a>
                     <a href="#terms">Terms & Conditions</a>
                     <a href="#contact">Contact Us</a>
                     <span>Telegram link emailed after purchase</span>
@@ -2695,7 +2779,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Monster Streams. All rights reserved. | Non-refundable service | VPN required for certain regions</p>
+                <p>&copy; 2026 Monster Streams. All rights reserved. | Non-refundable service | VPN required for certain regions | Use content only as permitted in your jurisdiction</p>
             </div>
         </div>
     </footer>
@@ -2800,10 +2884,11 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: encodeFormData(formData)
-            }).then(() => {
+            }).then(function (response) {
+                if (!response.ok) throw new Error('Submit failed');
                 alert('Thank you! Your free trial request has been received. We\'ll contact you shortly at ' + data.email);
                 form.reset();
-            }).catch(error => {
+            }).catch(function () {
                 alert('Oops! Something went wrong. Please try submitting the form again or email us directly.');
             });
         }
@@ -2818,10 +2903,11 @@
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
                 body: encodeFormData(formData)
-            }).then(() => {
+            }).then(function (response) {
+                if (!response.ok) throw new Error('Submit failed');
                 alert('Thank you for your message! We\'ll get back to you soon at ' + data.email);
                 form.reset();
-            }).catch(error => {
+            }).catch(function () {
                 alert('Oops! Something went wrong. Please try again or email us directly.');
             });
         }
