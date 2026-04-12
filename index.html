@@ -2582,8 +2582,7 @@
                     <div class="trial-note">
                         <p>⚠️ IMPORTANT: Please take a free 24 hour Monster Streams trial (Monday-Friday) to test first before purchasing. This ensures compatibility with your device and satisfaction with our IPTV service.</p>
                     </div>
-                    <form id="trialForm" name="trial" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleTrialSubmit(event)">
-                        <input type="hidden" name="form-name" value="trial">
+                    <form id="trialForm" name="trial" method="POST" action="/" data-netlify="true" netlify netlify-honeypot="bot-field" onsubmit="handleTrialSubmit(event)">
                         <p style="display:none;">
                             <label>Don't fill this out if you're human: <input name="bot-field" /></label>
                         </p>
@@ -2708,8 +2707,7 @@
                     </div>
                 </div>
                 <div class="contact-form-container fade-in">
-                    <form id="contactForm" name="contact" method="POST" action="/" data-netlify="true" netlify-honeypot="contact-bot-field" onsubmit="handleContactSubmit(event)" class="trial-card" style="text-align: left;">
-                        <input type="hidden" name="form-name" value="contact">
+                    <form id="contactForm" name="contact" method="POST" action="/" data-netlify="true" netlify netlify-honeypot="contact-bot-field" onsubmit="handleContactSubmit(event)" class="trial-card" style="text-align: left;">
                         <p style="display:none;">
                             <label>Don't fill this out if you're human: <input name="contact-bot-field" /></label>
                         </p>
@@ -2868,47 +2866,67 @@
             });
         }
 
-        // Helper to encode form data for Netlify
-        function encodeFormData(formData) {
-            return new URLSearchParams(formData).toString();
+        /**
+         * Encode a Netlify form as application/x-www-form-urlencoded with exactly one form-name.
+         * Avoids duplicate form-name when Netlify also injects a hidden field at deploy time.
+         */
+        function encodeNetlifyFormBody(form) {
+            const formData = new FormData(form);
+            const params = new URLSearchParams();
+            const formName = form.getAttribute('name') || 'contact';
+            formData.forEach(function (value, key) {
+                if (key === 'form-name') return;
+                params.append(key, value);
+            });
+            params.set('form-name', formName);
+            return params.toString();
         }
 
-        // Form Submission Handlers
-        function handleTrialSubmit(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
+        function postNetlifyForm(form, successMessage) {
+            const action = (form.getAttribute('action') || '/').trim() || '/';
+            const email = form.querySelector('[type="email"]');
+            const emailVal = email ? email.value : '';
 
-            fetch('/', {
+            return fetch(action, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: encodeFormData(formData)
+                body: encodeNetlifyFormBody(form),
+                credentials: 'same-origin'
             }).then(function (response) {
-                if (!response.ok) throw new Error('Submit failed');
-                alert('Thank you! Your free trial request has been received. We\'ll contact you shortly at ' + data.email);
+                if (!response.ok) {
+                    if (response.status === 404) {
+                        throw new Error('Form not registered (404). In Netlify: enable Form detection, redeploy, then confirm the form appears under Site → Forms.');
+                    }
+                    throw new Error('HTTP ' + response.status);
+                }
+                alert(successMessage.replace('{email}', emailVal));
                 form.reset();
-            }).catch(function () {
-                alert('Oops! Something went wrong. Please try submitting the form again or email us directly.');
+            });
+        }
+
+        function handleTrialSubmit(event) {
+            event.preventDefault();
+            const form = document.getElementById('trialForm');
+            if (!form) return;
+
+            postNetlifyForm(
+                form,
+                'Thank you! Your free trial request has been received. We\'ll contact you shortly at {email}'
+            ).catch(function () {
+                alert('Oops! Something went wrong. Please try again or email monstertv6969@gmail.com directly.');
             });
         }
 
         function handleContactSubmit(event) {
             event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
+            const form = document.getElementById('contactForm');
+            if (!form) return;
 
-            fetch('/', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                body: encodeFormData(formData)
-            }).then(function (response) {
-                if (!response.ok) throw new Error('Submit failed');
-                alert('Thank you for your message! We\'ll get back to you soon at ' + data.email);
-                form.reset();
-            }).catch(function () {
-                alert('Oops! Something went wrong. Please try again or email us directly.');
+            postNetlifyForm(
+                form,
+                'Thank you for your message! We\'ll get back to you soon at {email}'
+            ).catch(function () {
+                alert('Oops! Something went wrong. Please try again or email monstertv6969@gmail.com directly.');
             });
         }
 
