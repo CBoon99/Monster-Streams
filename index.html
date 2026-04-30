@@ -1915,7 +1915,7 @@
     <div id="particles"></div>
 
     <!-- Top Banner -->
-    <a href="#contact" class="top-banner" onclick="event.preventDefault(); const target = document.querySelector('#contact'); if (target) { target.scrollIntoView({ behavior: 'smooth' }); }">
+    <a href="#contact" class="top-banner">
         <p>Monster TiviMate &amp; Monster Smarters v5 are live — Monster IBO Pro Player coming soon.</p>
     </a>
 
@@ -2942,9 +2942,14 @@
         // Smooth Scroll
         function scrollToSection(sectionId) {
             const section = document.getElementById(sectionId);
-            if (section) {
-                section.scrollIntoView({ behavior: 'smooth' });
-            }
+            if (!section) return;
+            const header = document.querySelector('.header');
+            const banner = document.querySelector('.top-banner');
+            const headerHeight = header ? header.offsetHeight : 0;
+            const bannerHeight = banner ? banner.offsetHeight : 0;
+            const offset = headerHeight + bannerHeight + 12;
+            const targetTop = section.getBoundingClientRect().top + window.pageYOffset - offset;
+            window.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
         }
 
         // Scroll to Top
@@ -3008,16 +3013,15 @@
                     if (target) {
                         // Remove active states that might cause flicker
                         this.blur();
-                        
-                        // Smooth scroll with offset for fixed header
-                        const headerOffset = 80;
-                        const elementPosition = target.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
+                        // Close mobile menu first if open
+                        const mobileMenu = document.getElementById('mobileMenu');
+                        if (mobileMenu && mobileMenu.classList.contains('active')) {
+                            mobileMenu.classList.remove('active');
+                            document.body.style.overflow = '';
+                        }
+
+                        scrollToSection(href.replace('#', ''));
                     }
                 }, { passive: false });
             });
