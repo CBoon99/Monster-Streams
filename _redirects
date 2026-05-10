@@ -1,0 +1,4 @@
+# Consolidate host + HTTPS on www (301, forced — avoids split signals between apex and www)
+https://msterstreams.com/* https://www.msterstreams.com/:splat 301!
+http://msterstreams.com/* https://www.msterstreams.com/:splat 301!
+http://www.msterstreams.com/* https://www.msterstreams.com/:splat 301!

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://msterstreams.com/sitemap.xml
+Sitemap: https://www.msterstreams.com/sitemap.xml
