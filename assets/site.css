@@ -493,6 +493,26 @@ textarea:focus-visible {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 5;
+}
+
+/* On stacked hero layouts, .hero-visual paints after .hero-text; absolutely
+   positioned .streaming-rings (600×600) can extend upward over the CTAs and
+   intercept taps on phones/tablets. Keep decorations non-interactive. */
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-visual .streaming-rings,
+.hero-visual .streaming-rings::before,
+.hero-visual .streaming-rings::after {
+    pointer-events: none;
+}
+
+.hero-visual .monster-graphic {
+    pointer-events: none;
 }
 
 .btn {
@@ -525,6 +545,7 @@ textarea:focus-visible {
     background: rgba(255, 255, 255, 0.3);
     transform: translate(-50%, -50%);
     transition: width 0.6s ease, height 0.6s ease;
+    pointer-events: none;
 }
 
 .btn:hover::before {
@@ -561,6 +582,7 @@ textarea:focus-visible {
 
 .hero-visual {
     position: relative;
+    z-index: 1;
     height: 500px;
     display: flex;
     align-items: center;
@@ -1857,6 +1879,28 @@ a.logo-container {
     margin: 0 auto;
 }
 
+.blog-article-inner a {
+    color: var(--cyan-accent);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.blog-article-inner a:hover {
+    color: var(--neon-green);
+    text-decoration: underline;
+}
+
+.blog-simple-title {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(26px, 5vw, 40px);
+    font-weight: 900;
+    color: var(--neon-green);
+    text-align: center;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    text-shadow: 0 0 28px rgba(0, 255, 136, 0.55);
+}
+
 .blog-article-inner .article-meta {
     text-align: center;
     color: var(--gray);
@@ -1873,6 +1917,11 @@ a.logo-container {
 }
 
 .blog-article-inner ul {
+    margin: 0 0 24px 22px;
+    padding: 0;
+}
+
+.blog-article-inner ol {
     margin: 0 0 24px 22px;
     padding: 0;
 }

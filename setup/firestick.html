@@ -1,65 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="robots" content="index, follow">
 
-  <title>Firestick IPTV Setup | Monster Streams IPTV</title>
-  <meta name="description" content="Quick Firestick checklist for Monster Streams: install the right player app, allow installs from unknown sources for the downloader only, add your credentials, and prefetch guide data before match day." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-  <link rel="canonical" href="https://www.msterstreams.com/setup/firestick.html" />
+    <title>Firestick IPTV Setup | Monster Streams IPTV</title>
+    <meta name="description" content="Quick Firestick checklist for Monster Streams: install the right player app, allow installs from unknown sources for the downloader only, add your credentials, and prefetch guide data before match day." />
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Firestick IPTV Setup | Monster Streams IPTV">
-  <meta property="og:description" content="Firestick checklist: apps, permissions, credentials, and stability tips before live events.">
-  <meta property="og:url" content="https://www.msterstreams.com/setup/firestick.html">
-  <meta property="og:image" content="https://www.msterstreams.com/assets/og-default.jpg">
+    <link rel="canonical" href="https://www.msterstreams.com/setup/firestick.html" />
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Firestick IPTV Setup | Monster Streams IPTV">
-  <meta name="twitter:description" content="Firestick checklist: apps, permissions, credentials, and stability tips before live events.">
-  <meta name="twitter:image" content="https://www.msterstreams.com/assets/og-default.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Firestick IPTV Setup | Monster Streams IPTV">
+    <meta property="og:description" content="Firestick checklist: apps, permissions, credentials, and stability tips before live events.">
+    <meta property="og:url" content="https://www.msterstreams.com/setup/firestick.html">
+    <meta property="og:image" content="https://www.msterstreams.com/assets/og-default.jpg">
 
-  <link rel="icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Firestick IPTV Setup | Monster Streams IPTV">
+    <meta name="twitter:description" content="Firestick checklist: apps, permissions, credentials, and stability tips before live events.">
+    <meta name="twitter:image" content="https://www.msterstreams.com/assets/og-default.jpg">
 
-  <style>
-    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; line-height: 1.65; color: #0f172a; background: #fff; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 32px 18px; }
-    nav a { margin-right: 14px; color: #0f172a; text-decoration: none; }
-    h1 { margin: 18px 0 8px; }
-    footer { margin-top: 32px; font-size: 14px; color: #64748b; }
-    a { color: #0369a1; }
-  </style>
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <link rel="stylesheet" href="/assets/site.css">
+
+    <meta name="theme-color" content="#00ff88">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <nav>
-        <a href="/">Home</a>
-        <a href="/blog/">Blog</a>
-        <a href="/setup/">Setup</a>
-      </nav>
+    <div id="particles"></div>
+
+    <a href="/contact/" class="top-banner">
+        <p>Monster TiviMate &amp; Monster Smarters v5 are live — Monster IBO Pro Player coming soon.</p>
+    </a>
+
+    <header class="header">
+        <nav class="nav">
+            <a href="/" class="logo-container">
+                <img src="/Logo/Logo.png" alt="Monster Streams — TV and streaming solutions for home and business" class="logo-img" loading="eager">
+                <span class="logo-text">Monster Streams</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/#features">Features</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/setup/">Setup</a></li>
+                <li><a href="/#pricing">Pricing</a></li>
+                <li><a href="/#trial" class="cta-nav">Free Trial</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+            <button type="button" class="menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile menu">MENU</button>
+        </nav>
     </header>
 
-    <h1>Amazon Firestick</h1>
-    <p>Use the player package you were given (for example Monster TiviMate or Monster Smarters). Keep the device on power and Wi-Fi with a clear line of sight to your router when possible.</p>
-    <ol>
-      <li>Install the APK or app build from your onboarding link.</li>
-      <li>Enable unknown sources only for the installer you trust (e.g. Downloader), then disable when finished.</li>
-      <li>Open the app, add your playlist or portal credentials exactly as supplied.</li>
-      <li>Open Live TV, Movies, and Series once so the guide can populate.</li>
-      <li>Before big events, restart the stick and close background apps.</li>
-    </ol>
-    <p>More detail lives on the homepage <a href="/#setup">accordion setup section</a>. <a href="/setup/">← All setup guides</a></p>
+    <div class="mobile-menu" id="mobileMenu">
+        <button type="button" class="mobile-close" onclick="toggleMobileMenu()" aria-label="Close mobile menu">×</button>
+        <ul class="mobile-links">
+            <li><a href="/" onclick="toggleMobileMenu()">Home</a></li>
+            <li><a href="/#features" onclick="toggleMobileMenu()">Features</a></li>
+            <li><a href="/blog/" onclick="toggleMobileMenu()">Blog</a></li>
+            <li><a href="/setup/" onclick="toggleMobileMenu()">Setup</a></li>
+            <li><a href="/#pricing" onclick="toggleMobileMenu()">Pricing</a></li>
+            <li><a href="/#trial" onclick="toggleMobileMenu()">Free Trial</a></li>
+            <li><a href="/contact/" onclick="toggleMobileMenu()">Contact</a></li>
+        </ul>
+    </div>
 
-    <footer>
-      <a href="/">Monster Streams home</a>
+    <main class="blog-page-main" role="main">
+        <section class="news-section">
+            <div class="container">
+                <article class="news-card fade-in blog-article-shell visible">
+                    <div class="blog-article-inner">
+                        <h1 class="blog-simple-title">Amazon Firestick</h1>
+                        <p>Use the player package you were given (for example Monster TiviMate or Monster Smarters). Keep the device on power and Wi-Fi with a clear line of sight to your router when possible.</p>
+                        <ol>
+                            <li>Install the APK or app build from your onboarding link.</li>
+                            <li>Enable unknown sources only for the installer you trust (e.g. Downloader), then disable when finished.</li>
+                            <li>Open the app, add your playlist or portal credentials exactly as supplied.</li>
+                            <li>Open Live TV, Movies, and Series once so the guide can populate.</li>
+                            <li>Before big events, restart the stick and close background apps.</li>
+                        </ol>
+                        <p>More detail lives on the homepage <a href="/#setup">accordion setup section</a>. <a href="/setup/">← All setup guides</a></p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="/Logo/Logo.png" alt="Monster Streams — streaming and TV solutions logo" class="footer-logo" loading="lazy">
+                    <h4>Monster Streams</h4>
+                    <p>TV and streaming setup for homes and businesses in the UK, US, and worldwide, including Thailand, Phuket, and Southeast Asia—with multi-device support and trial options.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="/">Home</a>
+                    <a href="/#features">Features</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/setup/">Setup guides</a>
+                    <a href="/#pricing">Pricing</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <a href="/#trial">Free Trial</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/blog/iptv-thailand-phuket-southeast-asia-guide.html">IPTV Thailand guide</a>
+                    <a href="/#terms">Terms &amp; Conditions</a>
+                    <a href="/contact/">Contact us</a>
+                    <span>Telegram link emailed after purchase</span>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Trial Requests:</p>
+                    <a href="mailto:monstertv6969@gmail.com">monstertv6969@gmail.com</a>
+                    <p style="margin-top: 15px;">Subscriptions:</p>
+                    <a href="mailto:monstertvpayments6969@gmail.com">monstertvpayments6969@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Monster Streams. All rights reserved. | Non-refundable service | VPN required for certain regions | Use content only as permitted in your jurisdiction</p>
+            </div>
+        </div>
     </footer>
-  </div>
+
+    <div class="scroll-top" id="scrollTop" onclick="scrollToTop()" aria-label="Scroll to top" role="button" tabindex="0"></div>
+
+    <script>
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            if (!particlesContainer) return;
+            const particleCount = 50;
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.width = Math.random() * 3 + 1 + 'px';
+                particle.style.height = particle.style.width;
+                particle.style.animationDuration = Math.random() * 10 + 15 + 's';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (!mobileMenu) return;
+            mobileMenu.classList.toggle('active');
+            document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+        }
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function handleScrollAnimations() {
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach((element) => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        function handleHeaderScroll() {
+            const header = document.querySelector('.header');
+            const scrollTopBtn = document.getElementById('scrollTop');
+            if (!header || !scrollTopBtn) return;
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+                scrollTopBtn.classList.add('visible');
+            } else {
+                header.classList.remove('scrolled');
+                scrollTopBtn.classList.remove('visible');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createParticles();
+            handleScrollAnimations();
+            handleHeaderScroll();
+
+            const scrollTopBtn = document.getElementById('scrollTop');
+            if (scrollTopBtn) {
+                scrollTopBtn.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        scrollToTop();
+                    }
+                });
+            }
+        });
+
+        window.addEventListener('scroll', () => {
+            handleScrollAnimations();
+            handleHeaderScroll();
+        });
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                const mobileMenu = document.getElementById('mobileMenu');
+                if (mobileMenu) {
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+    </script>
 </body>
 </html>
