@@ -1253,7 +1253,7 @@
 
             postNetlifyForm(
                 form,
-                'Thank you! Your subscription request has been received. We'll contact you shortly at {email} with payment and setup details.'
+                'Thank you! Your subscription request has been received. We\'ll contact you shortly at {email} with payment and setup details.'
             ).catch(function () {
                 alert('Oops! Something went wrong. Please try again or email monstertvpayments6969@gmail.com directly.');
             });
@@ -1305,9 +1305,20 @@
             }
         }
 
+        function updateFixedChromeMetrics() {
+            const banner = document.querySelector('.top-banner');
+            const header = document.querySelector('.header');
+            const bannerHeight = banner ? Math.ceil(banner.getBoundingClientRect().height) : 0;
+            const headerHeight = header ? Math.ceil(header.getBoundingClientRect().height) : 0;
+
+            document.documentElement.style.setProperty('--top-banner-height', bannerHeight + 'px');
+            document.documentElement.style.setProperty('--header-height', headerHeight + 'px');
+        }
+
         // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             createParticles();
+            updateFixedChromeMetrics();
             handleScrollAnimations();
             handleHeaderScroll();
 
@@ -1355,12 +1366,16 @@
 
         // Resize Event Listener
         window.addEventListener('resize', () => {
+            updateFixedChromeMetrics();
+
             if (window.innerWidth > 768) {
                 const mobileMenu = document.getElementById('mobileMenu');
                 mobileMenu.classList.remove('active');
                 document.body.style.overflow = '';
             }
         });
+
+        window.addEventListener('load', updateFixedChromeMetrics);
     </script>
 </body>
 </html>
