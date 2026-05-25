@@ -1935,6 +1935,13 @@ a.logo-container {
     text-shadow: 0 0 18px rgba(0, 255, 136, 0.35);
 }
 
+.blog-article-inner h3 {
+    font-size: clamp(20px, 3vw, 26px);
+    color: var(--cyan-accent);
+    margin: 28px 0 10px;
+    font-weight: 800;
+}
+
 .blog-article-inner h1.article-headline {
     font-family: 'Orbitron', monospace;
     font-size: clamp(26px, 5vw, 42px);
@@ -1980,6 +1987,46 @@ a.logo-container {
 
 .blog-toc a:hover {
     color: var(--neon-green);
+}
+
+.blog-table-wrap {
+    overflow-x: auto;
+    margin: 28px 0 12px;
+    border: 2px solid rgba(0, 255, 136, 0.25);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.blog-table-wrap table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+}
+
+.blog-table-wrap th,
+.blog-table-wrap td {
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(0, 255, 136, 0.14);
+    color: var(--light-gray);
+    text-align: left;
+    font-size: 17px;
+}
+
+.blog-table-wrap th {
+    color: var(--neon-green);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    background: rgba(0, 255, 136, 0.08);
+}
+
+.blog-table-wrap tr:last-child td {
+    border-bottom: 0;
+}
+
+.blog-article-inner .source-note {
+    color: var(--gray);
+    font-size: 16px;
 }
 
 .blog-article-cta {
