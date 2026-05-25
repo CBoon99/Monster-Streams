@@ -226,7 +226,8 @@ textarea:focus-visible {
     text-decoration: none;
     padding: 12px 20px;
     border-radius: 8px;
-    transition: color 0.3s ease, background 0.3s ease, border 0.3s ease;
+    border: 1px solid transparent;
+    transition: color 0.3s ease, background 0.3s ease, transform 0.3s ease;
     font-weight: 600;
     font-size: 16px;
     position: relative;
@@ -255,8 +256,7 @@ textarea:focus-visible {
 
 .nav-links a:hover {
     color: var(--neon-green);
-    background: rgba(0, 255, 136, 0.1);
-    border: 1px solid var(--neon-green);
+    background: transparent;
     transform: translateY(-2px);
 }
 
@@ -280,9 +280,21 @@ textarea:focus-visible {
     -webkit-tap-highlight-color: transparent;
 }
 
+.nav-links li:nth-last-child(3) .cta-nav {
+    background: transparent;
+    color: var(--cyan-accent) !important;
+    box-shadow: none;
+    padding: 12px 20px !important;
+}
+
 .cta-nav:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 30px rgba(0, 255, 136, 0.6);
+}
+
+.nav-links li:nth-last-child(3) .cta-nav:hover {
+    color: var(--neon-green) !important;
+    box-shadow: none;
 }
 
 .cta-nav:active {
