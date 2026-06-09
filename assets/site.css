@@ -136,6 +136,206 @@ textarea:focus-visible {
     text-transform: uppercase;
 }
 
+.top-banner-promo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+}
+
+.top-banner-promo .top-banner-text {
+    margin: 0;
+    color: var(--neon-green);
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    line-height: 1.35;
+}
+
+.top-banner-promo .top-banner-text strong {
+    color: var(--gold-accent);
+}
+
+.top-banner-save {
+    color: var(--gold-accent);
+    font-weight: 700;
+}
+
+.top-banner-cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 18px;
+    border-radius: 999px;
+    background: var(--neon-green);
+    color: var(--deep-space);
+    font-weight: 800;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.45);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.top-banner-promo:hover .top-banner-cta {
+    transform: translateY(-1px);
+    box-shadow: 0 0 28px rgba(0, 255, 136, 0.65);
+}
+
+.promo-page-main {
+    padding-top: 40px;
+}
+
+.promo-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.promo-hero-copy h1 {
+    font-family: 'Orbitron', monospace;
+    font-size: clamp(32px, 5vw, 52px);
+    color: var(--neon-green);
+    margin-bottom: 18px;
+    line-height: 1.15;
+}
+
+.promo-hero-copy .promo-lead {
+    font-size: 20px;
+    color: var(--light-gray);
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.promo-price-card {
+    display: inline-block;
+    background: rgba(255, 215, 0, 0.08);
+    border: 2px solid var(--gold-accent);
+    border-radius: 16px;
+    padding: 20px 28px;
+    margin-bottom: 24px;
+}
+
+.promo-price-card .promo-price {
+    font-family: 'Orbitron', monospace;
+    font-size: 42px;
+    color: var(--gold-accent);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.promo-price-card .promo-was {
+    color: var(--gray);
+    font-size: 18px;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.promo-price-card .promo-save {
+    color: var(--neon-green);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.promo-hero-image {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 255, 136, 0.35);
+    box-shadow: 0 20px 60px rgba(0, 255, 136, 0.2);
+}
+
+.promo-hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.promo-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0 0 30px;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+.promo-benefits li {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(0, 255, 136, 0.25);
+    border-radius: 12px;
+    padding: 16px 18px;
+    color: var(--light-gray);
+    font-size: 17px;
+}
+
+.promo-benefits li strong {
+    color: var(--neon-green);
+}
+
+.promo-direct-note {
+    background: rgba(0, 255, 136, 0.08);
+    border: 1px solid rgba(0, 255, 136, 0.35);
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 28px;
+    color: var(--light-gray);
+    font-size: 17px;
+    text-align: left;
+}
+
+.promo-form-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.promo-form-wrap .trial-card {
+    text-align: left;
+}
+
+.promo-form-wrap .trial-card h2,
+.promo-form-wrap .form-submit {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .promo-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .promo-hero-image {
+        order: -1;
+    }
+
+    .promo-benefits {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-banner-promo {
+        gap: 8px;
+        padding: 8px 12px;
+    }
+
+    .top-banner-promo .top-banner-text {
+        font-size: 11px;
+    }
+
+    .top-banner-cta {
+        padding: 6px 14px;
+        font-size: 11px;
+    }
+}
+
 @keyframes bannerPulse {
     0%, 100% {
         box-shadow: 0 4px 20px rgba(0, 255, 136, 0.3);
